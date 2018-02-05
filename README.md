@@ -1,2 +1,2 @@
-# villimjs
-Javascript API for Villim smart contracts
+# okdkjs
+Javascript API for OkeyDokey smart contracts
