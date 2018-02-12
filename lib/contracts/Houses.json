@@ -1,15 +1,15 @@
 {
   "contractName": "Houses",
   "abi": [],
-  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a72305820b8619a2da82934a249e0762a02828cba9389e52d4ed91f50ff945192323628800029",
-  "deployedBytecode": "0x6060604052600080fd00a165627a7a72305820b8619a2da82934a249e0762a02828cba9389e52d4ed91f50ff945192323628800029",
+  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a723058209d7b2d4127852e17db037bb41b3fd4bf5ed151303c1bd94eb520b007c49ec3130029",
+  "deployedBytecode": "0x6060604052600080fd00a165627a7a723058209d7b2d4127852e17db037bb41b3fd4bf5ed151303c1bd94eb520b007c49ec3130029",
   "sourceMap": "26:19:0:-;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "26:19:0:-;;;;;",
   "source": "pragma solidity ^0.4.19;\n\ncontract Houses {\n}\n\n\ncontract Devices {\n\n\t/**\n     * Reinitialize values dependant on other functions.\n     *\n     * @param _okeyDokeyAddress The address of main application contract.\n     * @return success Whether the reinitialization was successful.\n     */\n    // function initializeContracts(address _okeyDokeyAddress) public returns (bool success) {\n    //     require(msg.sender == admin);\n    //     require(_okeyDokeyAddress != 0);\n    //     require(_okeyDokeyAddress != address(this));\n\n    //     okeyDokeyAddress = _okeyDokeyAddress;\n    //     okeyDokey = OkeyDokey(okeyDokeyAddress);\n\n    //     // devicesAddress = okeyDokey.getAddress(2);\n    //     // devices = Devices(devicesAddress);\n\n    //     // reservationsAddress = okeyDokey.getAddress(3);\n    //     // reservations = Reservations(reservationsAddress);\n\n    //     // require(devicesAddress != 0x0);\n    //     // require(devicesAddress != address(this));\n\n    //     // require(reservationsAddress != 0x0);\n    //     // require(reservationsAddress != address(this));\n\n    //     return true;\n    // }\n\n}\n",
-  "sourcePath": "/Users/seongmin/okeydokey/contracts/devices.sol",
+  "sourcePath": "/home/seongmin/okeydokey/contracts/devices.sol",
   "ast": {
     "attributes": {
-      "absolutePath": "/Users/seongmin/okeydokey/contracts/devices.sol",
+      "absolutePath": "/home/seongmin/okeydokey/contracts/devices.sol",
       "exportedSymbols": {
         "Devices": [
           3
@@ -166,17 +166,67 @@
       "links": {},
       "address": "0x45201350964f7e1b62673d87f92b40062e246886"
     },
-    "1518407049269": {
+    "1518459401986": {
       "events": {},
       "links": {},
-      "address": "0x45201350964f7e1b62673d87f92b40062e246886"
+      "address": "0xcd8ff0c35ccb46f48d59a75d998cae85ab71bd87"
     },
-    "1518407330748": {
+    "1518459600018": {
       "events": {},
       "links": {},
-      "address": "0x45201350964f7e1b62673d87f92b40062e246886"
+      "address": "0xcd8ff0c35ccb46f48d59a75d998cae85ab71bd87"
+    },
+    "1518459738850": {
+      "events": {},
+      "links": {},
+      "address": "0xcd8ff0c35ccb46f48d59a75d998cae85ab71bd87"
+    },
+    "1518459776034": {
+      "events": {},
+      "links": {},
+      "address": "0xcd8ff0c35ccb46f48d59a75d998cae85ab71bd87"
+    },
+    "1518460594376": {
+      "events": {},
+      "links": {},
+      "address": "0xcd8ff0c35ccb46f48d59a75d998cae85ab71bd87"
+    },
+    "1518460621189": {
+      "events": {},
+      "links": {},
+      "address": "0xcd8ff0c35ccb46f48d59a75d998cae85ab71bd87"
+    },
+    "1518460894766": {
+      "events": {},
+      "links": {},
+      "address": "0xcd8ff0c35ccb46f48d59a75d998cae85ab71bd87"
+    },
+    "1518460949254": {
+      "events": {},
+      "links": {},
+      "address": "0xcd8ff0c35ccb46f48d59a75d998cae85ab71bd87"
+    },
+    "1518461298663": {
+      "events": {},
+      "links": {},
+      "address": "0xcd8ff0c35ccb46f48d59a75d998cae85ab71bd87"
+    },
+    "1518461392104": {
+      "events": {},
+      "links": {},
+      "address": "0xcd8ff0c35ccb46f48d59a75d998cae85ab71bd87"
+    },
+    "1518461446598": {
+      "events": {},
+      "links": {},
+      "address": "0xcd8ff0c35ccb46f48d59a75d998cae85ab71bd87"
+    },
+    "1518462315554": {
+      "events": {},
+      "links": {},
+      "address": "0xcd8ff0c35ccb46f48d59a75d998cae85ab71bd87"
     }
   },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-02-12T03:48:54.647Z"
+  "updatedAt": "2018-02-12T19:05:19.775Z"
 }
