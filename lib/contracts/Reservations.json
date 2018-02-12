@@ -1,0 +1,120 @@
+{
+  "contractName": "Reservations",
+  "abi": [],
+  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a723058206875f2eb139356ad371412f9d16452d80e64ce1cf01558deba3a463a6d9c31370029",
+  "deployedBytecode": "0x6060604052600080fd00a165627a7a723058206875f2eb139356ad371412f9d16452d80e64ce1cf01558deba3a463a6d9c31370029",
+  "sourceMap": "26:27:5:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "26:27:5:-;;;;;",
+  "source": "pragma solidity ^0.4.19;\n\ncontract Reservations {\n\t\n}",
+  "sourcePath": "/home/seongmin/okeydokey/contracts/reservations.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/home/seongmin/okeydokey/contracts/reservations.sol",
+      "exportedSymbols": {
+        "Reservations": [
+          1768
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".19"
+          ]
+        },
+        "id": 1767,
+        "name": "PragmaDirective",
+        "src": "0:24:5"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            1768
+          ],
+          "name": "Reservations",
+          "nodes": [
+            null
+          ],
+          "scope": 1769
+        },
+        "id": 1768,
+        "name": "ContractDefinition",
+        "src": "26:27:5"
+      }
+    ],
+    "id": 1769,
+    "name": "SourceUnit",
+    "src": "0:53:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
+  },
+  "networks": {
+    "1518392076947": {
+      "events": {},
+      "links": {},
+      "address": "0x1522fe3c6ec44a5a7816e0dab2ba425aa5ad2278"
+    },
+    "1518392409849": {
+      "events": {},
+      "links": {},
+      "address": "0xa0ad6909605aee9ecbbe8f1115317780d016a39f"
+    },
+    "1518393217569": {
+      "events": {},
+      "links": {},
+      "address": "0x88d0aa4db1fc4670fcaa59d7500d554c22d74807"
+    },
+    "1518394108388": {
+      "events": {},
+      "links": {},
+      "address": "0x2dd52c7bf8070d580308090b32abe5728233015e"
+    },
+    "1518394343126": {
+      "events": {},
+      "links": {},
+      "address": "0x9fe466cf858656cf1e4af5ddd5b99411d75c2d1c"
+    },
+    "1518394559505": {
+      "events": {},
+      "links": {},
+      "address": "0xf042ee15b0d0034f1c6b3aab3735e420f7f9d06e"
+    },
+    "1518395067519": {
+      "events": {},
+      "links": {},
+      "address": "0xf6eff393c66ab59e0b019cf5c8f3fa707931c6a9"
+    },
+    "1518396122453": {
+      "events": {},
+      "links": {},
+      "address": "0x9f781afcbf002c44c22e72ce6165d79d597f9b62"
+    },
+    "1518396763458": {
+      "events": {},
+      "links": {},
+      "address": "0x1e44e5ae01cf8d3f8ce482c135c817caacbddd52"
+    },
+    "1518396817326": {
+      "events": {},
+      "links": {},
+      "address": "0x0b175f14cdd46959ece4c1a80a3c977f9fe0dae1"
+    }
+  },
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-02-12T00:53:41.238Z"
+}
