@@ -1,7 +1,7 @@
 # okdkjs
 Javascript API for OkeyDokey smart contracts
 
-<img src="img/logo.png" width="532" height="184">
+<div style="text-align:center"><img src="img/logo.png" width="532" height="184"></div>
 
 
 # Installation
