@@ -1,6 +1,9 @@
 # okdkjs
 Javascript API for OkeyDokey smart contracts
 
+![logo.png](img/logo.png)
+
+
 # Installation
 To install globally:
 ```bash
@@ -24,10 +27,10 @@ web3 = new Web3(new Web3.providers.HttpProvider(ethClient));
 var OKDK = require('okdkjs');
 var okdk = OKDK(web3).then(
     function(_okdk) { 
-        /* Initialization successful. */
+        // Initialization successful.
         yourInitFunction(_okdk);
     }, function(_error) {
-    	/* Initialization failed. */
+    	// Initialization failed.
       	yourfallbackFunction(_error);
     });
 ```
