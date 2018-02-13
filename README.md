@@ -30,8 +30,8 @@ var okdk = OKDK(web3).ready.then(_okdk => {
         // Initialization successful.
         yourInitFunction(_okdk);
     }).catch(error => {
-		// Initialization failed.
-		console.log(error);
+        // Initialization failed.
+        console.log(error);
     });
 ```
 
