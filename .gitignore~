@@ -6,7 +6,7 @@
 *.exe
 *.o
 *.so
-lib/contracts/
+./lib/contracts/
 
 # Packages #
 ############
