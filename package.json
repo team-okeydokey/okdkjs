@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "okdkjs",
-    "generate-docs": "node_modules/.bin/jsdoc -c jsdoc.json"
+    "docs": "node_modules/.bin/jsdoc -c jsdoc.json",
+    "lint": "node_modules/.bin/eslint ."
   },
   "repository": {
     "type": "git",
