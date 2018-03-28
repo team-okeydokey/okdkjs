@@ -6,14 +6,9 @@ Javascript API for OkeyDokey smart contracts
 </p>
 
 # Installation
-To install globally:
-```bash
-npm install -g okdkjs
-```
 
-To install as a dev dependancy:
 ```bash
-npm install --save-dev okdkjs
+npm install --save okdkjs
 ```
 
 
