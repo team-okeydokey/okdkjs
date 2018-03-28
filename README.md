@@ -33,3 +33,14 @@ var okdk = OKDK(web3).ready.then(_okdk => {
 
 # API Documentation
 Read the [Docs](https://team-okeydokey.github.io/okdkjs/)
+
+
+# NPM Scripts
+
+`npm run test`: Run tests.
+
+`npm run docs`: Generate docs in the `docs/` folder.
+
+`npm run checklint`: Check code formatting.
+
+`npm run fixlint`: Automatically fix code formatting.

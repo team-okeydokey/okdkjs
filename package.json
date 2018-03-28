@@ -6,7 +6,8 @@
   "scripts": {
     "test": "okdkjs",
     "docs": "node_modules/.bin/jsdoc -c jsdoc.json",
-    "lint": "node_modules/.bin/eslint ."
+    "checklint": "node_modules/.bin/eslint ./lib index.js",
+    "fixlint": "node_modules/.bin/eslint --fix ./lib index.js"
   },
   "repository": {
     "type": "git",
