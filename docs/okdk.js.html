@@ -22,7 +22,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Accounts.html">Accounts</a><ul class='methods'><li data-type='method'><a href="Accounts.html#initAccounts">initAccounts</a></li></ul></li><li><a href="Core.html">Core</a><ul class='methods'><li data-type='method'><a href="Core.html#callContract">callContract</a></li><li data-type='method'><a href="Core.html#setOkeyDokey">setOkeyDokey</a></li><li data-type='method'><a href="Core.html#syncAbi">syncAbi</a></li><li data-type='method'><a href="Core.html#syncAddresses">syncAddresses</a></li></ul></li><li><a href="Devices.html">Devices</a><ul class='methods'><li data-type='method'><a href="Devices.html#getDeviceInfo">getDeviceInfo</a></li><li data-type='method'><a href="Devices.html#registerDevice">registerDevice</a></li></ul></li><li><a href="Houses.html">Houses</a><ul class='methods'><li data-type='method'><a href="Houses.html#createListing">createListing</a></li><li data-type='method'><a href="Houses.html#getHouseInfo">getHouseInfo</a></li><li data-type='method'><a href="Houses.html#registerHouse">registerHouse</a></li><li data-type='method'><a href="Houses.html#uploadHouseToSwarm">uploadHouseToSwarm</a></li></ul></li><li><a href="OKDK.html">OKDK</a></li><li><a href="Reservations.html">Reservations</a><ul class='methods'><li data-type='method'><a href="Reservations.html#getReservationInfo">getReservationInfo</a></li><li data-type='method'><a href="Reservations.html#reserve">reserve</a></li></ul></li><li><a href="Reviews.html">Reviews</a></li><li><a href="Storage.html">Storage</a><ul class='methods'><li data-type='method'><a href="Storage.html#downloadJSON">downloadJSON</a></li><li data-type='method'><a href="Storage.html#uploadJSON">uploadJSON</a></li></ul></li><li><a href="Token.html">Token</a><ul class='methods'><li data-type='method'><a href="Token.html#approve">approve</a></li><li data-type='method'><a href="Token.html#sendToken">sendToken</a></li></ul></li><li><a href="Transaction.html">Transaction</a><ul class='methods'><li data-type='method'><a href="Transaction.html#callContract">callContract</a></li></ul></li><li><a href="User.html">User</a><ul class='methods'><li data-type='method'><a href="User.html#getAddressString">getAddressString</a></li><li data-type='method'><a href="User.html#getPrivateKeyString">getPrivateKeyString</a></li><li data-type='method'><a href="User.html#setAddress">setAddress</a></li><li data-type='method'><a href="User.html#setPrivateKey">setPrivateKey</a></li></ul></li><li><a href="Utils.html">Utils</a><ul class='methods'><li data-type='method'><a href="Utils.html#getGridId">getGridId</a></li><li data-type='method'><a href="Utils.html#stringToByteArray">stringToByteArray</a></li></ul></li><li><a href="Whisper.html">Whisper</a><ul class='methods'><li data-type='method'><a href="Whisper.html#post">post</a></li><li data-type='method'><a href="Whisper.html#subscribe">subscribe</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#loadAccount">loadAccount</a></li><li><a href="global.html#newAccount">newAccount</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Accounts.html">Accounts</a><ul class='methods'><li data-type='method'><a href="Accounts.html#initAccounts">initAccounts</a></li></ul></li><li><a href="Core.html">Core</a></li><li><a href="Houses.html">Houses</a><ul class='methods'><li data-type='method'><a href="Houses.html#createListing">createListing</a></li><li data-type='method'><a href="Houses.html#getHouseInfo">getHouseInfo</a></li><li data-type='method'><a href="Houses.html#registerHouse">registerHouse</a></li><li data-type='method'><a href="Houses.html#uploadHouseToSwarm">uploadHouseToSwarm</a></li></ul></li><li><a href="OKDK.html">OKDK</a></li><li><a href="Reservations.html">Reservations</a><ul class='methods'><li data-type='method'><a href="Reservations.html#getReservationInfo">getReservationInfo</a></li><li data-type='method'><a href="Reservations.html#reserve">reserve</a></li></ul></li><li><a href="Reviews.html">Reviews</a></li><li><a href="Storage.html">Storage</a><ul class='methods'><li data-type='method'><a href="Storage.html#downloadJSON">downloadJSON</a></li><li data-type='method'><a href="Storage.html#uploadJSON">uploadJSON</a></li></ul></li><li><a href="Token.html">Token</a><ul class='methods'><li data-type='method'><a href="Token.html#approve">approve</a></li><li data-type='method'><a href="Token.html#sendToken">sendToken</a></li></ul></li><li><a href="Transaction.html">Transaction</a></li><li><a href="User.html">User</a><ul class='methods'><li data-type='method'><a href="User.html#getAddressString">getAddressString</a></li><li data-type='method'><a href="User.html#getPrivateKeyString">getPrivateKeyString</a></li><li data-type='method'><a href="User.html#setAddress">setAddress</a></li><li data-type='method'><a href="User.html#setPrivateKey">setPrivateKey</a></li></ul></li><li><a href="Utils.html">Utils</a><ul class='methods'><li data-type='method'><a href="Utils.html#getGridId">getGridId</a></li><li data-type='method'><a href="Utils.html#stringToByteArray">stringToByteArray</a></li></ul></li><li><a href="Whisper.html">Whisper</a><ul class='methods'><li data-type='method'><a href="Whisper.html#post">post</a></li><li data-type='method'><a href="Whisper.html#subscribe">subscribe</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#loadAccount">loadAccount</a></li><li><a href="global.html#newAccount">newAccount</a></li></ul>
 </nav>
 
 <div id="main">
@@ -42,90 +42,95 @@
 'use strict';
 
 module.exports = function(web3) {
+  /* Set up web3 */
+  // const ethClient = 'https://ropsten.infura.io/ynXBPNoUYJ3C4ZDzqjga';
+  const ethClient = 'http://localhost:8545';
+  const bzzClient = 'http://swarm-gateways.net';
 
-    /* Set up web3 */
-    // const ethClient = 'https://ropsten.infura.io/ynXBPNoUYJ3C4ZDzqjga';
-    const ethClient = 'http://localhost:8545';
-    const bzzClient = 'http://swarm-gateways.net';
+  let Web3 = require('web3');
 
-    var Web3 = require('web3');
+  web3 = new Web3(new Web3.providers.HttpProvider(ethClient));
+  web3.bzz.setProvider(bzzClient);
 
-    web3 = new Web3(new Web3.providers.HttpProvider(ethClient));
-    web3.bzz.setProvider(bzzClient);
-
-    return new OKDK(web3);
+  return new OKDK(web3);
 };
 
 /* Import libraries. */
-var Core = require('./core/core');
-var Accounts = require('./accounts/accounts');
-var Utils = require('./utils/utils');
-var Storage = require('./storage/storage');
-var Whisper = require('./whisper/whisper');
-var Houses = require('./houses/houses');
-var Devices = require('./devices/devices');
-var Reservations = require('./reservations/reservations');
-var Reviews = require('./reviews/reviews');
+const Core = require('./core/core');
+const Accounts = require('./accounts/accounts');
+const Utils = require('./utils/utils');
+const Storage = require('./storage/storage');
+const Whisper = require('./whisper/whisper');
+const Houses = require('./houses/houses');
+const Devices = require('./devices/devices');
+const Reservations = require('./reservations/reservations');
+const Reviews = require('./reviews/reviews');
 
 /**
  * Set up OKDK library and relevant modules.
- * @constructor 
+ * @constructor
  *
  * @param {Object} web3 - Externally created web3 object.
  */
 function OKDK(web3) {
-    this.chainId = 3; // Use Ropsten.
+  this.chainId = 3; // Use Ropsten.
 
-    this.web3 = web3;
+  this.web3 = web3;
+  this.utils = Utils(this);
+  this.storage = Storage(this);
+  this.whisper = Whisper(this);
 
-    this.utils = Utils(this);
-    this.storage = Storage(this);
-    this.whisper = Whisper(this);
-
-    var context = this;
-    
-    /* Set up core module */
-    this.core = Core(this);
-
-    this.core.ready.then(result => {
-        
-        /* Set up accounts */
-        var _accounts = Accounts();
-        context.accounts = _accounts._accounts;
-
-        /* Set up contract endpoints. */
-        context.houses = Houses(context);
-        context.devices = Devices(context);
-        context.reservations = Reservations(context);
-        context.reviews = Reviews(context);
-
-    }).catch(error => {
-        console.log(error);
-    });
+  /* Set up core module */
+  this.core = Core(this);
 }
 
+OKDK.prototype.init = async function() {
 
+  try {
+
+    const coreReady = await this.core.init();
+
+    /* Set up accounts */
+    let _accounts = Accounts();
+    this.accounts = _accounts._accounts;
+
+    /* Set up contract endpoints. */
+    this.houses = Houses(this);
+    this.devices = Devices(this);
+    this.reservations = Reservations(this);
+    this.reviews = Reviews(this);
+
+  } catch(error) {
+      console.log(error);
+      console.log("OKDKjs init failed.")
+  }
+}
 
 /* Test */
 OKDK.prototype.test = async function() {
-
     /* Return account address */
     // console.log('Account address: ' + this.accounts[0].getAddressString());
 
     /* Test send token */
     // console.log(this.accounts[0].getAddressString());
-    // this.core.approve(this.accounts[0], '0xb24af1f3d5ec84aa14693d114ae94ef542da521f', 200000);
+    // this.core.approve(this.accounts[0],
+    //                   '0xb24af1f3d5ec84aa14693d114ae94ef542da521f', 200000);
 
     /* Test send token */
-    //this.core.sendToken(this.accounts[0], '0x435C4c81bb9cf4326FfB05cb25A862d62151897D', 2);
+    // this.core.sendToken(this.accounts[0],
+    //                     '0x435C4c81bb9cf4326FfB05cb25A862d62151897D', 2);
 
     /* Test house registration */
-    const houseId = await this.houses.createListing({user: this.accounts[0], houseName:"House Name", hostName:"Host Name", 
-        addrFull:"addrFull", addrSummary:"addrSummary", addrDirection:"addrDirection", 
-        description:"description", numGuest:2, numBedroom:1, numBed:1, numBathroom:2,
-        hourlyRate:2441, dailyRate:402, utilityFee:1234, cleaningFee:5678, 
-        latitude:127.23, longitude:12.42, housePolicy:"policy", cancellationPolicy:"Don't cancel", 
-        amenities:[], houseImageHashes:[],  houseType:1});
+    const houseId = await this.houses.createListing(
+      {user: this.accounts[0],
+        houseName: 'House Name', hostName: 'Host Name',
+        addrFull: 'addrFull', addrSummary: 'addrSummary',
+        addrDirection: 'addrDirection', description: 'description',
+        numGuest: 2, numBedroom: 1, numBed: 1, numBathroom: 2,
+        hourlyRate: 2441, dailyRate: 402, utilityFee: 1234, cleaningFee: 5678,
+        latitude: 127.23, longitude: 12.42,
+        housePolicy: 'policy', cancellationPolicy: 'Don\'t cancel',
+        amenities: [], houseImageHashes: [], houseType: 1});
     console.log(houseId);
 
     /* Test house info fetch */
@@ -133,11 +138,13 @@ OKDK.prototype.test = async function() {
     console.log(houseInfo);
 
     /* Test reservation */
-    const reservationId = await this.reservations.reserve(this.accounts[0], 1, 4, 5);
+    const reservationId =
+      await this.reservations.reserve(this.accounts[0], 1, 4, 5);
     console.log(reservationId);
 
     /* Test reservation info fetch */
-    const reservationInfo = await this.reservations.getReservationInfo(1);
+    const reservationInfo =
+      await this.reservations.getReservationInfo(1);
     console.log(reservationInfo);
 
 
@@ -147,7 +154,7 @@ OKDK.prototype.test = async function() {
     // }).catch(error => {
     //     console.log(error);
     // });
-}
+};
 
 </code></pre>
         </article>
@@ -161,7 +168,7 @@ OKDK.prototype.test = async function() {
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Mar 28 2018 12:13:22 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Mar 28 2018 14:01:16 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

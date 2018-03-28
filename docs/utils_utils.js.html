@@ -22,7 +22,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Accounts.html">Accounts</a><ul class='methods'><li data-type='method'><a href="Accounts.html#initAccounts">initAccounts</a></li></ul></li><li><a href="Core.html">Core</a><ul class='methods'><li data-type='method'><a href="Core.html#callContract">callContract</a></li><li data-type='method'><a href="Core.html#setOkeyDokey">setOkeyDokey</a></li><li data-type='method'><a href="Core.html#syncAbi">syncAbi</a></li><li data-type='method'><a href="Core.html#syncAddresses">syncAddresses</a></li></ul></li><li><a href="Devices.html">Devices</a><ul class='methods'><li data-type='method'><a href="Devices.html#getDeviceInfo">getDeviceInfo</a></li><li data-type='method'><a href="Devices.html#registerDevice">registerDevice</a></li></ul></li><li><a href="Houses.html">Houses</a><ul class='methods'><li data-type='method'><a href="Houses.html#createListing">createListing</a></li><li data-type='method'><a href="Houses.html#getHouseInfo">getHouseInfo</a></li><li data-type='method'><a href="Houses.html#registerHouse">registerHouse</a></li><li data-type='method'><a href="Houses.html#uploadHouseToSwarm">uploadHouseToSwarm</a></li></ul></li><li><a href="OKDK.html">OKDK</a></li><li><a href="Reservations.html">Reservations</a><ul class='methods'><li data-type='method'><a href="Reservations.html#getReservationInfo">getReservationInfo</a></li><li data-type='method'><a href="Reservations.html#reserve">reserve</a></li></ul></li><li><a href="Reviews.html">Reviews</a></li><li><a href="Storage.html">Storage</a><ul class='methods'><li data-type='method'><a href="Storage.html#downloadJSON">downloadJSON</a></li><li data-type='method'><a href="Storage.html#uploadJSON">uploadJSON</a></li></ul></li><li><a href="Token.html">Token</a><ul class='methods'><li data-type='method'><a href="Token.html#approve">approve</a></li><li data-type='method'><a href="Token.html#sendToken">sendToken</a></li></ul></li><li><a href="Transaction.html">Transaction</a><ul class='methods'><li data-type='method'><a href="Transaction.html#callContract">callContract</a></li></ul></li><li><a href="User.html">User</a><ul class='methods'><li data-type='method'><a href="User.html#getAddressString">getAddressString</a></li><li data-type='method'><a href="User.html#getPrivateKeyString">getPrivateKeyString</a></li><li data-type='method'><a href="User.html#setAddress">setAddress</a></li><li data-type='method'><a href="User.html#setPrivateKey">setPrivateKey</a></li></ul></li><li><a href="Utils.html">Utils</a><ul class='methods'><li data-type='method'><a href="Utils.html#getGridId">getGridId</a></li><li data-type='method'><a href="Utils.html#stringToByteArray">stringToByteArray</a></li></ul></li><li><a href="Whisper.html">Whisper</a><ul class='methods'><li data-type='method'><a href="Whisper.html#post">post</a></li><li data-type='method'><a href="Whisper.html#subscribe">subscribe</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#loadAccount">loadAccount</a></li><li><a href="global.html#newAccount">newAccount</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Accounts.html">Accounts</a><ul class='methods'><li data-type='method'><a href="Accounts.html#initAccounts">initAccounts</a></li></ul></li><li><a href="Core.html">Core</a></li><li><a href="Houses.html">Houses</a><ul class='methods'><li data-type='method'><a href="Houses.html#createListing">createListing</a></li><li data-type='method'><a href="Houses.html#getHouseInfo">getHouseInfo</a></li><li data-type='method'><a href="Houses.html#registerHouse">registerHouse</a></li><li data-type='method'><a href="Houses.html#uploadHouseToSwarm">uploadHouseToSwarm</a></li></ul></li><li><a href="OKDK.html">OKDK</a></li><li><a href="Reservations.html">Reservations</a><ul class='methods'><li data-type='method'><a href="Reservations.html#getReservationInfo">getReservationInfo</a></li><li data-type='method'><a href="Reservations.html#reserve">reserve</a></li></ul></li><li><a href="Reviews.html">Reviews</a></li><li><a href="Storage.html">Storage</a><ul class='methods'><li data-type='method'><a href="Storage.html#downloadJSON">downloadJSON</a></li><li data-type='method'><a href="Storage.html#uploadJSON">uploadJSON</a></li></ul></li><li><a href="Token.html">Token</a><ul class='methods'><li data-type='method'><a href="Token.html#approve">approve</a></li><li data-type='method'><a href="Token.html#sendToken">sendToken</a></li></ul></li><li><a href="Transaction.html">Transaction</a></li><li><a href="User.html">User</a><ul class='methods'><li data-type='method'><a href="User.html#getAddressString">getAddressString</a></li><li data-type='method'><a href="User.html#getPrivateKeyString">getPrivateKeyString</a></li><li data-type='method'><a href="User.html#setAddress">setAddress</a></li><li data-type='method'><a href="User.html#setPrivateKey">setPrivateKey</a></li></ul></li><li><a href="Utils.html">Utils</a><ul class='methods'><li data-type='method'><a href="Utils.html#getGridId">getGridId</a></li><li data-type='method'><a href="Utils.html#stringToByteArray">stringToByteArray</a></li></ul></li><li><a href="Whisper.html">Whisper</a><ul class='methods'><li data-type='method'><a href="Whisper.html#post">post</a></li><li data-type='method'><a href="Whisper.html#subscribe">subscribe</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#loadAccount">loadAccount</a></li><li><a href="global.html#newAccount">newAccount</a></li></ul>
 </nav>
 
 <div id="main">
@@ -48,41 +48,41 @@ module.exports = function(okdk) {
 /**
  * Initialize utility module.
  * @constructor
- * 
+ *
  * @param {Object} okdk - OkeyDokey module instance.
  */
 function Utils(okdk) {
-	_okdk = okdk;
+  _okdk = okdk;
 }
 
 /**
  * Create byte array from string.
- * 
+ *
  * @param {string} string - String to convert to byte array.
- * @param {byte[]} bytes - Converted byte array.
+ * @return {byte[]} bytes - Converted byte array.
  */
 Utils.prototype.stringToByteArray = function(string) {
-	var utf8 = unescape(encodeURIComponent(string));
+  let utf8 = unescape(encodeURIComponent(string));
 
-	var array = [];
-	for (var i = 0; i &lt; utf8.length; i++) {
-	    array.push(utf8.charCodeAt(i));
-	}
+  let array = [];
+  for (let i = 0; i &lt; utf8.length; i++) {
+      array.push(utf8.charCodeAt(i));
+  }
 
-	return array;
-}
+  return array;
+};
 
 /**
  * Calculate grid id from latitude and longitude.
- * 
+ *
  * @param {int} latitude - Latitude of coordinate.
  * @param {int} longitude - Longitude of coordinate.
- * @param {boolean} gridId - Id within the Earth's grid.
+ * @return {int} gridId - Id within the Earth's grid.
  */
 Utils.prototype.getGridId = function(latitude, longitude) {
-	
-	return 0;
-}</code></pre>
+  return 0;
+};
+</code></pre>
         </article>
     </section>
 
@@ -94,7 +94,7 @@ Utils.prototype.getGridId = function(latitude, longitude) {
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Mar 28 2018 12:13:22 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Mar 28 2018 14:01:16 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

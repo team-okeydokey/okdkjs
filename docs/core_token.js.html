@@ -22,7 +22,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Accounts.html">Accounts</a><ul class='methods'><li data-type='method'><a href="Accounts.html#initAccounts">initAccounts</a></li></ul></li><li><a href="Core.html">Core</a><ul class='methods'><li data-type='method'><a href="Core.html#callContract">callContract</a></li><li data-type='method'><a href="Core.html#setOkeyDokey">setOkeyDokey</a></li><li data-type='method'><a href="Core.html#syncAbi">syncAbi</a></li><li data-type='method'><a href="Core.html#syncAddresses">syncAddresses</a></li></ul></li><li><a href="Devices.html">Devices</a><ul class='methods'><li data-type='method'><a href="Devices.html#getDeviceInfo">getDeviceInfo</a></li><li data-type='method'><a href="Devices.html#registerDevice">registerDevice</a></li></ul></li><li><a href="Houses.html">Houses</a><ul class='methods'><li data-type='method'><a href="Houses.html#createListing">createListing</a></li><li data-type='method'><a href="Houses.html#getHouseInfo">getHouseInfo</a></li><li data-type='method'><a href="Houses.html#registerHouse">registerHouse</a></li><li data-type='method'><a href="Houses.html#uploadHouseToSwarm">uploadHouseToSwarm</a></li></ul></li><li><a href="OKDK.html">OKDK</a></li><li><a href="Reservations.html">Reservations</a><ul class='methods'><li data-type='method'><a href="Reservations.html#getReservationInfo">getReservationInfo</a></li><li data-type='method'><a href="Reservations.html#reserve">reserve</a></li></ul></li><li><a href="Reviews.html">Reviews</a></li><li><a href="Storage.html">Storage</a><ul class='methods'><li data-type='method'><a href="Storage.html#downloadJSON">downloadJSON</a></li><li data-type='method'><a href="Storage.html#uploadJSON">uploadJSON</a></li></ul></li><li><a href="Token.html">Token</a><ul class='methods'><li data-type='method'><a href="Token.html#approve">approve</a></li><li data-type='method'><a href="Token.html#sendToken">sendToken</a></li></ul></li><li><a href="Transaction.html">Transaction</a><ul class='methods'><li data-type='method'><a href="Transaction.html#callContract">callContract</a></li></ul></li><li><a href="User.html">User</a><ul class='methods'><li data-type='method'><a href="User.html#getAddressString">getAddressString</a></li><li data-type='method'><a href="User.html#getPrivateKeyString">getPrivateKeyString</a></li><li data-type='method'><a href="User.html#setAddress">setAddress</a></li><li data-type='method'><a href="User.html#setPrivateKey">setPrivateKey</a></li></ul></li><li><a href="Utils.html">Utils</a><ul class='methods'><li data-type='method'><a href="Utils.html#getGridId">getGridId</a></li><li data-type='method'><a href="Utils.html#stringToByteArray">stringToByteArray</a></li></ul></li><li><a href="Whisper.html">Whisper</a><ul class='methods'><li data-type='method'><a href="Whisper.html#post">post</a></li><li data-type='method'><a href="Whisper.html#subscribe">subscribe</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#loadAccount">loadAccount</a></li><li><a href="global.html#newAccount">newAccount</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Accounts.html">Accounts</a><ul class='methods'><li data-type='method'><a href="Accounts.html#initAccounts">initAccounts</a></li></ul></li><li><a href="Core.html">Core</a></li><li><a href="Houses.html">Houses</a><ul class='methods'><li data-type='method'><a href="Houses.html#createListing">createListing</a></li><li data-type='method'><a href="Houses.html#getHouseInfo">getHouseInfo</a></li><li data-type='method'><a href="Houses.html#registerHouse">registerHouse</a></li><li data-type='method'><a href="Houses.html#uploadHouseToSwarm">uploadHouseToSwarm</a></li></ul></li><li><a href="OKDK.html">OKDK</a></li><li><a href="Reservations.html">Reservations</a><ul class='methods'><li data-type='method'><a href="Reservations.html#getReservationInfo">getReservationInfo</a></li><li data-type='method'><a href="Reservations.html#reserve">reserve</a></li></ul></li><li><a href="Reviews.html">Reviews</a></li><li><a href="Storage.html">Storage</a><ul class='methods'><li data-type='method'><a href="Storage.html#downloadJSON">downloadJSON</a></li><li data-type='method'><a href="Storage.html#uploadJSON">uploadJSON</a></li></ul></li><li><a href="Token.html">Token</a><ul class='methods'><li data-type='method'><a href="Token.html#approve">approve</a></li><li data-type='method'><a href="Token.html#sendToken">sendToken</a></li></ul></li><li><a href="Transaction.html">Transaction</a></li><li><a href="User.html">User</a><ul class='methods'><li data-type='method'><a href="User.html#getAddressString">getAddressString</a></li><li data-type='method'><a href="User.html#getPrivateKeyString">getPrivateKeyString</a></li><li data-type='method'><a href="User.html#setAddress">setAddress</a></li><li data-type='method'><a href="User.html#setPrivateKey">setPrivateKey</a></li></ul></li><li><a href="Utils.html">Utils</a><ul class='methods'><li data-type='method'><a href="Utils.html#getGridId">getGridId</a></li><li data-type='method'><a href="Utils.html#stringToByteArray">stringToByteArray</a></li></ul></li><li><a href="Whisper.html">Whisper</a><ul class='methods'><li data-type='method'><a href="Whisper.html#post">post</a></li><li data-type='method'><a href="Whisper.html#subscribe">subscribe</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#loadAccount">loadAccount</a></li><li><a href="global.html#newAccount">newAccount</a></li></ul>
 </nav>
 
 <div id="main">
@@ -50,7 +50,7 @@ module.exports = function(okdk) {
 /**
  * Set up Token module.
  * @constructor
- * 
+ *
  * @param {Object} okdk - OKDk module instance.
  */
 function Token(okdk) {
@@ -60,56 +60,55 @@ function Token(okdk) {
     this._okdkTokenAbi = okdk.core._tokenAbi;
     this._okdkTokenAddress = okdk.core._tokenAddress;
 
-    this._okdkTokenContract = new _okdk.web3.eth.Contract(this._okdkTokenAbi, 
+    this._okdkTokenContract = new _okdk.web3.eth.Contract(this._okdkTokenAbi,
                                                            this._okdkTokenAddress);
 }
 
 /**
  * Approve spending on contract's behalf.
- * 
+ *
  * @param {Object} user - User instance of sender.
  * @param {string} spender - Address of spender.
  * @param {int} value - Amount to add to allowance.
  */
 Token.prototype.approve = function(user, spender, value) {
-
-    var callData = this._okdkTokenContract.methods.approve(
+    let callData = this._okdkTokenContract.methods.approve(
                                 spender, value).encodeABI();
 
-    var ccwv = this.callContractWithValues;
-    var tokenContractAddr = this._okdkTokenAddress;
+    let ccwv = this.callContractWithValues;
+    let tokenContractAddr = this._okdkTokenAddress;
 
     return _okdk.web3.eth.getTransactionCount(user.getAddressString())
-    .then(result => {
+    .then((result) => {
         return ccwv(user, result, tokenContractAddr, 0, callData);
-    }).catch(error => {
+    }).catch((error) => {
         errorNonce(error);
     });
-}
+};
 
 
 /**
  * Send OKDK token.
- * 
+ *
  * @param {Object} user - User instance of sender.
  * @param {string} to - Address of receiver.
  * @param {int} value - Amount to send.
  */
 Token.prototype.sendToken = function(user, to, value) {
-
-    var callData = this._okdkTokenContract.methods.transferFrom(
+    let callData = this._okdkTokenContract.methods.transferFrom(
                                 user.getAddressString(), to, value).encodeABI();
 
-    var ccwv = this.callContractWithValues;
-    var tokenContractAddr = this._okdkTokenAddress;
+    let ccwv = this.callContractWithValues;
+    let tokenContractAddr = this._okdkTokenAddress;
 
     return _okdk.web3.eth.getTransactionCount(user.getAddressString())
-    .then(result => {
+    .then((result) => {
         return ccwv(user, result, tokenContractAddr, 0, callData);
-    }).catch(error => {
+    }).catch((error) => {
         errorNonce(error);
     });
-}</code></pre>
+};
+</code></pre>
         </article>
     </section>
 
@@ -121,7 +120,7 @@ Token.prototype.sendToken = function(user, to, value) {
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Mar 28 2018 12:13:22 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Mar 28 2018 14:01:16 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

@@ -3,7 +3,7 @@
         "allowUnknownTags": false
     },
     "source": {
-        "include": "./",
+        "include": [ "./lib", "README.md" ],
         // "includePattern": "",
         "excludePattern": "(node_modules/|docs|img/|.gitignore|.git/)"
     },
