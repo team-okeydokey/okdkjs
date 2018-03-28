@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Utils - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Accounts.html">Accounts</a><ul class='methods'><li data-type='method'><a href="Accounts.html#initAccounts">initAccounts</a></li></ul></li><li><a href="Core.html">Core</a><ul class='methods'><li data-type='method'><a href="Core.html#callContract">callContract</a></li><li data-type='method'><a href="Core.html#setOkeyDokey">setOkeyDokey</a></li><li data-type='method'><a href="Core.html#syncAbi">syncAbi</a></li><li data-type='method'><a href="Core.html#syncAddresses">syncAddresses</a></li></ul></li><li><a href="Devices.html">Devices</a><ul class='methods'><li data-type='method'><a href="Devices.html#getDeviceInfo">getDeviceInfo</a></li><li data-type='method'><a href="Devices.html#registerDevice">registerDevice</a></li></ul></li><li><a href="Houses.html">Houses</a><ul class='methods'><li data-type='method'><a href="Houses.html#createListing">createListing</a></li><li data-type='method'><a href="Houses.html#getHouseInfo">getHouseInfo</a></li><li data-type='method'><a href="Houses.html#registerHouse">registerHouse</a></li><li data-type='method'><a href="Houses.html#uploadHouseToSwarm">uploadHouseToSwarm</a></li></ul></li><li><a href="OKDK.html">OKDK</a></li><li><a href="Reservations.html">Reservations</a><ul class='methods'><li data-type='method'><a href="Reservations.html#getReservationInfo">getReservationInfo</a></li><li data-type='method'><a href="Reservations.html#reserve">reserve</a></li></ul></li><li><a href="Reviews.html">Reviews</a></li><li><a href="Storage.html">Storage</a><ul class='methods'><li data-type='method'><a href="Storage.html#downloadJSON">downloadJSON</a></li><li data-type='method'><a href="Storage.html#uploadJSON">uploadJSON</a></li></ul></li><li><a href="Token.html">Token</a><ul class='methods'><li data-type='method'><a href="Token.html#approve">approve</a></li><li data-type='method'><a href="Token.html#sendToken">sendToken</a></li></ul></li><li><a href="Transaction.html">Transaction</a><ul class='methods'><li data-type='method'><a href="Transaction.html#callContract">callContract</a></li></ul></li><li><a href="User.html">User</a><ul class='methods'><li data-type='method'><a href="User.html#getAddressString">getAddressString</a></li><li data-type='method'><a href="User.html#getPrivateKeyString">getPrivateKeyString</a></li><li data-type='method'><a href="User.html#setAddress">setAddress</a></li><li data-type='method'><a href="User.html#setPrivateKey">setPrivateKey</a></li></ul></li><li><a href="Utils.html">Utils</a><ul class='methods'><li data-type='method'><a href="Utils.html#getGridId">getGridId</a></li><li data-type='method'><a href="Utils.html#stringToByteArray">stringToByteArray</a></li></ul></li><li><a href="Whisper.html">Whisper</a><ul class='methods'><li data-type='method'><a href="Whisper.html#post">post</a></li><li data-type='method'><a href="Whisper.html#subscribe">subscribe</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#loadAccount">loadAccount</a></li><li><a href="global.html#newAccount">newAccount</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Utils</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        Utils
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    <h4 class="name" id="Utils"><span class="type-signature"></span>new Utils<span class="signature">(okdk)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="utils_utils.js.html">utils/utils.js</a>, <a href="utils_utils.js.html#line15">line 15</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>Initialize utility module.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>okdk</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>OkeyDokey module instance.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="getGridId"><span class="type-signature"></span>getGridId<span class="signature">(latitude, longitude, gridId)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="utils_utils.js.html">utils/utils.js</a>, <a href="utils_utils.js.html#line43">line 43</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>Calculate grid id from latitude and longitude.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>latitude</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">int</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Latitude of coordinate.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>longitude</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">int</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Longitude of coordinate.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>gridId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Id within the Earth's grid.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="stringToByteArray"><span class="type-signature"></span>stringToByteArray<span class="signature">(string, bytes)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="utils_utils.js.html">utils/utils.js</a>, <a href="utils_utils.js.html#line25">line 25</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>Create byte array from string.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>string</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>String to convert to byte array.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>bytes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;byte></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Converted byte array.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Mar 28 2018 12:13:22 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

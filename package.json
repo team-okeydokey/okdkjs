@@ -4,7 +4,8 @@
   "description": "Javascript endpoint for OkeyDokey smart contracts",
   "main": "index.js",
   "scripts": {
-    "test": "okdkjs"
+    "test": "okdkjs",
+    "generate-docs": "node_modules/.bin/jsdoc -c jsdoc.json"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "web3": "^1.0.0-beta.27"
   },
   "devDependencies": {
+    "docdash": "^0.4.0",
     "jsdoc": "^3.5.5"
   }
 }

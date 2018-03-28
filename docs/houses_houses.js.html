@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>houses/houses.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Accounts.html">Accounts</a><ul class='methods'><li data-type='method'><a href="Accounts.html#initAccounts">initAccounts</a></li></ul></li><li><a href="Core.html">Core</a><ul class='methods'><li data-type='method'><a href="Core.html#callContract">callContract</a></li><li data-type='method'><a href="Core.html#setOkeyDokey">setOkeyDokey</a></li><li data-type='method'><a href="Core.html#syncAbi">syncAbi</a></li><li data-type='method'><a href="Core.html#syncAddresses">syncAddresses</a></li></ul></li><li><a href="Devices.html">Devices</a><ul class='methods'><li data-type='method'><a href="Devices.html#getDeviceInfo">getDeviceInfo</a></li><li data-type='method'><a href="Devices.html#registerDevice">registerDevice</a></li></ul></li><li><a href="Houses.html">Houses</a><ul class='methods'><li data-type='method'><a href="Houses.html#createListing">createListing</a></li><li data-type='method'><a href="Houses.html#getHouseInfo">getHouseInfo</a></li><li data-type='method'><a href="Houses.html#registerHouse">registerHouse</a></li><li data-type='method'><a href="Houses.html#uploadHouseToSwarm">uploadHouseToSwarm</a></li></ul></li><li><a href="OKDK.html">OKDK</a></li><li><a href="Reservations.html">Reservations</a><ul class='methods'><li data-type='method'><a href="Reservations.html#getReservationInfo">getReservationInfo</a></li><li data-type='method'><a href="Reservations.html#reserve">reserve</a></li></ul></li><li><a href="Reviews.html">Reviews</a></li><li><a href="Storage.html">Storage</a><ul class='methods'><li data-type='method'><a href="Storage.html#downloadJSON">downloadJSON</a></li><li data-type='method'><a href="Storage.html#uploadJSON">uploadJSON</a></li></ul></li><li><a href="Token.html">Token</a><ul class='methods'><li data-type='method'><a href="Token.html#approve">approve</a></li><li data-type='method'><a href="Token.html#sendToken">sendToken</a></li></ul></li><li><a href="Transaction.html">Transaction</a><ul class='methods'><li data-type='method'><a href="Transaction.html#callContract">callContract</a></li></ul></li><li><a href="User.html">User</a><ul class='methods'><li data-type='method'><a href="User.html#getAddressString">getAddressString</a></li><li data-type='method'><a href="User.html#getPrivateKeyString">getPrivateKeyString</a></li><li data-type='method'><a href="User.html#setAddress">setAddress</a></li><li data-type='method'><a href="User.html#setPrivateKey">setPrivateKey</a></li></ul></li><li><a href="Utils.html">Utils</a><ul class='methods'><li data-type='method'><a href="Utils.html#getGridId">getGridId</a></li><li data-type='method'><a href="Utils.html#stringToByteArray">stringToByteArray</a></li></ul></li><li><a href="Whisper.html">Whisper</a><ul class='methods'><li data-type='method'><a href="Whisper.html#post">post</a></li><li data-type='method'><a href="Whisper.html#subscribe">subscribe</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#loadAccount">loadAccount</a></li><li><a href="global.html#newAccount">newAccount</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">houses/houses.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>// houses.js
+
+'use strict'; 
+
+var _okdk;
+
+module.exports = function(okdk) {
+    return new Houses(okdk);
+};
+
+/**
+ * Set up Houses module.
+ * @constructor
+ * 
+ * @param {Object} okdk - OKDk module instance.
+ */
+function Houses(okdk) {
+    _okdk = okdk;
+
+    /* Load abi &amp; address */
+    this.address = _okdk.core._housesAddress;
+    this.abi = _okdk.core._housesAbi;
+    this.contract = new _okdk.web3.eth.Contract(this.abi, this.address);
+}
+
+/**
+ * Create house listing with supplied information.
+ *
+ * Handles Swarm upload and transaction to Houses contract. 
+ *
+ * @param {User} user - User instance of host.
+ * @param {Object} houseJSON - JSON object containing house info.
+ * @return {Promise} newHouseId - Promise that resolves to id of the new house.
+ */
+Houses.prototype.createListing = async function(user, houseName, hostName, 
+    addrFull, addrSummary, addrDirection, description, 
+    numGuest, numBedroom, numBed, numBathroom,
+    hourlyRate, dailyRate, utilityFee, cleaningFee,
+    latitude, longitude, housePolicy, cancellationPolicy,
+    amenities, houseImageHashes, houseType) {
+
+    try {
+        var context = this;
+
+        var houseJSON = {
+            "houseName": houseName,
+            "hostName": hostName,
+            "addrFull": addrFull,
+            "addrSummary": addrSummary,
+            "addrDirection": addrDirection,
+            "description": description,
+            "numGuest": numGuest,
+            "numBedroom": numBedroom,
+            "numBed": numBed,
+            "numBathroom": numBathroom,
+            "hourlyRate": hourlyRate,
+            "dailyRate": dailyRate,
+            "utilityFee": utilityFee,
+            "cleaningFee": cleaningFee,
+            "latitude": latitude,
+            "longitude": longitude,
+            "housePolicy": housePolicy,
+            "cancellationPolicy": cancellationPolicy,
+            "amenities": amenities,
+            "houseImageHashes": houseImageHashes, 
+            "houseType": houseType
+        };
+
+        var gridId = _okdk.utils.getGridId(latitude, longitude);
+
+        const bzzHash = await this.uploadHouseToSwarm(houseJSON);
+
+        const newId = await this.registerHouse(user, bzzHash, gridId);
+
+        return newId;
+
+    } catch (error) {
+        console.log(error);
+        return null;
+    }
+}
+
+/**
+ * Wrapper for Houses' registerHouse method. 
+ *
+ * @param {User} user - User instance of host.
+ * @param {string} bzzHash - Swarm hash of JSON file containing house info.
+ * @param {int} gridId - Id within the Earth's grid.
+ * @return {Promise} newId - Promise that resolves to id of the new house.
+ */
+Houses.prototype.registerHouse = async function(user, bzzHash, gridId) {
+
+    try {
+        var bytesHash = _okdk.web3.utils.asciiToHex(bzzHash);
+
+        // Construct abi.
+        var callData = this.contract.methods.registerHouse(bytesHash,gridId).encodeABI();
+
+        const result = await _okdk.core.callContract(user, this.address, callData);
+
+        return result;
+
+    } catch (error) {
+        console.log(error);
+        return null;
+    }
+}
+
+/**
+ * Upload house JSON file to Swarm. 
+ *
+ * @param {Object} houseJSON - JSON object containing house info.
+ * @return {Promise} bzzHash - Promise that resolves to id of the new house.
+ */
+Houses.prototype.uploadHouseToSwarm = async function(houseJSON) {
+
+    try {
+
+        const bzzHash = await _okdk.storage.uploadJSON(houseJSON);
+        console.log("House JSON upload to swarm complete.");
+        return bzzHash;
+
+    } catch (error) {
+        console.log(error);
+        return null;
+    }
+
+}
+
+/**
+ * Wrapper for Houses' getHouseInfo method. 
+ *
+ * @param {id} id - Id of the house to query.
+ * @return {Promise} houseInfo - Promise that resolves to an JSON object containing info of the house.
+ */
+Houses.prototype.getHouseInfo = async function(id) {
+
+    try {
+
+        const result = await this.contract.methods.getHouseInfo(id).call();
+
+        var houseJSON = {
+            "success": result[0],
+            "id": result[1],
+            "bzzHash": result[2],
+            "host": result[3],
+            "active": result[4]
+        };
+
+        return houseJSON;
+
+    } catch (error) {
+        console.log(error);
+        return null;
+    }
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Mar 28 2018 12:13:22 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
