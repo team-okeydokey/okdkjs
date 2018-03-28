@@ -21,13 +21,15 @@ web3 = new Web3(new Web3.providers.HttpProvider(ethClient));
 
 /* Initialize okdkjs and attach callbacks. */
 var OKDK = require('okdkjs');
-var okdk = OKDK(web3).ready.then(_okdk => { 
-        // Initialization successful.
-        yourInitFunction(_okdk);
-    }).catch(error => {
-        // Initialization failed.
-        console.log(error);
-    });
+var okdk = OKDK(web3);
+
+okdk.init().then(res => {
+  // Initialization successful.
+  yourInitFunction(_okdk);
+}).catch(error => {
+  // Initialization failed.
+  console.log(error);
+});
 ```
 
 
