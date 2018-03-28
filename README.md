@@ -35,4 +35,6 @@ var okdk = OKDK(web3).ready.then(_okdk => {
     });
 ```
 
+
+# API Documentation
 Read the [Docs](https://team-okeydokey.github.io/okdkjs/)
