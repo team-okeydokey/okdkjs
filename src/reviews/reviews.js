@@ -4,7 +4,7 @@
 
 var _okdk;
 
-module.exports = function (okdk) {
+module.exports = function(okdk) {
     return new Reviews(okdk);
 };
 

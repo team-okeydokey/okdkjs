@@ -5,6 +5,20 @@ Javascript API for OkeyDokey smart contracts
   <img align="center" src="img/logo.png" width="532" height="184" alt="logo.png"/>
 </p>
 
+# Dependancies
+
+1. babel (instructions from babel's [website](https://babeljs.io/))
+⋅⋅* install babel 
+```bash
+npm install --save-dev babel-cli babel-preset-env
+```
+⋅⋅* Create a .babelrc file
+```json
+{
+  "presets": ["env"]
+}
+```
+
 # Installation
 
 ```bash

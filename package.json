@@ -4,7 +4,9 @@
   "description": "Javascript endpoint for OkeyDokey smart contracts",
   "main": "index.js",
   "scripts": {
-    "test": "okdkjs",
+    "build": "babel -d lib/ src/",
+    "prepublish": "npm run build",
+    "test": "npm run build; mocha",
     "docs": "node_modules/.bin/jsdoc -c jsdoc.json",
     "checklint": "node_modules/.bin/eslint ./lib index.js",
     "fixlint": "node_modules/.bin/eslint --fix ./lib index.js"
@@ -19,7 +21,7 @@
     "smart",
     "contract"
   ],
-  "author": "OkeyDokey <teamvillim@gmail.com> (https://www.cosmos.energy)",
+  "author": "OkeyDokey <dev@okeydokey.net> (https://www.okeydokey.network)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/team-okeydokey/okdkjs/issues"
@@ -29,12 +31,18 @@
     "ethereumjs-tx": "^1.3.3",
     "ethereumjs-util": "^5.1.3",
     "ethereumjs-wallet": "^0.6.0",
+    "keythereum": "^1.0.3",
     "web3": "^1.0.0-beta.27"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
     "docdash": "^0.4.0",
     "eslint": "^4.19.1",
     "eslint-config-google": "^0.9.1",
-    "jsdoc": "^3.5.5"
+    "jsdoc": "^3.5.5",
+    "mocha": "^5.1.1"
   }
 }
