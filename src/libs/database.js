@@ -26,9 +26,9 @@ export default class Database extends Contract {
     /* Load abi & address */
     this._abi = okdk.core._databaseAbi;
     this._bytecode = okdk.core._databaseBytecode;
-    // if (okdk.web3.utils.isAddress(okdk.core._databaseAddress)) {
-    //   this.address = okdk.core._databaseAddress;
-    // }
+    if (okdk.web3.utils.isAddress(okdk.core._databaseAddress)) {
+      this.address = okdk.core._databaseAddress;
+    }
   }
 }
 

@@ -83,16 +83,16 @@ export default class Core {
 
       /* Fetch and construct database library. */
       const databaseData = okdk.utils.loadJSON(okdk.constants.DATABASE_DATA_PATH);
-      this._databseAbi = databaseData.abi;
+      this._databaseAbi = databaseData.abi;
       this._databaseBytecode = databaseData.bytecode;
       const databaseAddress = await okdkContract.methods.getAddress(3).call();
       this._databaseAddress = databaseAddress;
 
        /* Fetch and construct token contract. */
        const databaseTestData = okdk.utils.loadJSON(okdk.constants.DATABASE_TEST_DATA_PATH);
-       this._databseTestAbi = databaseTestData.abi;
+       this._databaseTestAbi = databaseTestData.abi;
        this._databaseTestBytecode = databaseTestData.bytecode;
-       const databaseTestAddress = await okdkContract.methods.getAddress(4).call();
+       const databaseTestAddress = await okdkContract.methods.getAddress(3).call();
        this._databaseTestAddress = databaseTestAddress;
 
     } catch (error) {

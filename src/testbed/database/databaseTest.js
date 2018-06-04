@@ -26,7 +26,7 @@ export default class DatabaseTest extends Contract {
     /* Load abi & address */
     this._abi = okdk.core._databaseTestAbi;
     this._bytecode = okdk.core._databaseTestBytecode;
-    this.address = okdk.core._databaseTestAddress;
+    // this.address = okdk.core._databaseTestAddress;
   }
 
   /**

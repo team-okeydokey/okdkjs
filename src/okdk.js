@@ -9,6 +9,7 @@ import Utils from './utils/utils';
 import Libs from './libs/libs';
 import Core from './core/core';
 import Token from './token/token';
+import Testbed from './testbed/testbed';
 
 export default class OKDK {
 
@@ -41,6 +42,9 @@ export default class OKDK {
 
     /* Set up OKEY token. */
     this.token = new Token(this);
+
+    /* Set up testbed module. */
+    this.testbed = new Testbed(this);
   }
 
   async init() {
@@ -51,6 +55,7 @@ export default class OKDK {
       const coreReady = await this.core.init();
       const libsReady = await this.libs.init();
       const tokenReady = await this.token.init();
+      const testbedReady = await this.testbed.init();      
 
     } catch(error) {
       throw error;
