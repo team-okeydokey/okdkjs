@@ -1,0 +1,119 @@
+{
+  "contractName": "ListingDatabase",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820192347ced203509abc7b76281073e73dd567b060f1b9083e29f65ec1ec05f7cd0029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820192347ced203509abc7b76281073e73dd567b060f1b9083e29f65ec1ec05f7cd0029",
+  "sourceMap": "61:29:6:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;61:29:6;;;;;;;",
+  "deployedSourceMap": "61:29:6:-;;;;;",
+  "source": "pragma solidity ^0.4.19;\n\nimport \"../storage/Database.sol\";\n\ncontract ListingDatabase {\n\n}",
+  "sourcePath": "/home/seongmin/okeydokey/contracts/core/market/ListingDatabase.sol",
+  "ast": {
+    "absolutePath": "/home/seongmin/okeydokey/contracts/core/market/ListingDatabase.sol",
+    "exportedSymbols": {
+      "ListingDatabase": [
+        1293
+      ]
+    },
+    "id": 1294,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1291,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:6"
+      },
+      {
+        "absolutePath": "/home/seongmin/okeydokey/contracts/core/storage/Database.sol",
+        "file": "../storage/Database.sol",
+        "id": 1292,
+        "nodeType": "ImportDirective",
+        "scope": 1294,
+        "sourceUnit": 2261,
+        "src": "26:33:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1293,
+        "linearizedBaseContracts": [
+          1293
+        ],
+        "name": "ListingDatabase",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 1294,
+        "src": "61:29:6"
+      }
+    ],
+    "src": "0:90:6"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/seongmin/okeydokey/contracts/core/market/ListingDatabase.sol",
+    "exportedSymbols": {
+      "ListingDatabase": [
+        1293
+      ]
+    },
+    "id": 1294,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1291,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:6"
+      },
+      {
+        "absolutePath": "/home/seongmin/okeydokey/contracts/core/storage/Database.sol",
+        "file": "../storage/Database.sol",
+        "id": 1292,
+        "nodeType": "ImportDirective",
+        "scope": 1294,
+        "sourceUnit": 2261,
+        "src": "26:33:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1293,
+        "linearizedBaseContracts": [
+          1293
+        ],
+        "name": "ListingDatabase",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 1294,
+        "src": "61:29:6"
+      }
+    ],
+    "src": "0:90:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-06-04T20:22:03.921Z"
+}

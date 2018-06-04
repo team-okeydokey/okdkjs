@@ -17,8 +17,8 @@ export default class Token extends Contract {
    * @param {Object} _okdk - OKDk module instance.
    */
   constructor(_okdk) {
-      super(_okdk);
-      okdk = _okdk;
+    super(_okdk);
+    okdk = _okdk;
   }
 
   /**

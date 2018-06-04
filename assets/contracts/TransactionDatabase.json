@@ -1,0 +1,97 @@
+{
+  "contractName": "TransactionDatabase",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a7230582045f522971c9fc3bf7b4ede2aa5fdff947a434d16ad3ddb5cb71e0774b15fc8250029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a7230582045f522971c9fc3bf7b4ede2aa5fdff947a434d16ad3ddb5cb71e0774b15fc8250029",
+  "sourceMap": "26:33:8:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:33:8;;;;;;;",
+  "deployedSourceMap": "26:33:8:-;;;;;",
+  "source": "pragma solidity ^0.4.19;\n\ncontract TransactionDatabase {\n\n}",
+  "sourcePath": "/home/seongmin/okeydokey/contracts/core/market/TransactionDatabase.sol",
+  "ast": {
+    "absolutePath": "/home/seongmin/okeydokey/contracts/core/market/TransactionDatabase.sol",
+    "exportedSymbols": {
+      "TransactionDatabase": [
+        1366
+      ]
+    },
+    "id": 1367,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1365,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:8"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1366,
+        "linearizedBaseContracts": [
+          1366
+        ],
+        "name": "TransactionDatabase",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 1367,
+        "src": "26:33:8"
+      }
+    ],
+    "src": "0:59:8"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/seongmin/okeydokey/contracts/core/market/TransactionDatabase.sol",
+    "exportedSymbols": {
+      "TransactionDatabase": [
+        1366
+      ]
+    },
+    "id": 1367,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1365,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:8"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1366,
+        "linearizedBaseContracts": [
+          1366
+        ],
+        "name": "TransactionDatabase",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 1367,
+        "src": "26:33:8"
+      }
+    ],
+    "src": "0:59:8"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-06-04T20:22:03.921Z"
+}

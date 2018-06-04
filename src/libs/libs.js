@@ -4,6 +4,7 @@
 
 import IterableMapping from './iterable_mapping'
 import SafeMath from './safe_math'
+import Database from './database';
 
 var okdk;
 
@@ -21,6 +22,7 @@ export default class Libs {
     /* Set up transaction module. */
     this.iterableMapping = new IterableMapping(okdk);
     this.safeMath = new SafeMath(okdk);
+    this.database = new Database(okdk);
   }
 
   /**
@@ -33,6 +35,7 @@ export default class Libs {
 
       const iterableMappingReady = await this.iterableMapping.init();
       const safeMathReady = await this.safeMath.init();
+      const databaseReady = await this.database.init();
 
     } catch(error) {
       throw error;

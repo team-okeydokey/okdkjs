@@ -46,46 +46,54 @@ export default class Core {
   async syncAddresses() {
     try {
 
-      /* Load static address file. */
-      const contractAddresses = okdk.utils.loadJSON(okdk.constants.ICO_ADDR_PATH);
+      /* Load okdk-god abi */
+      const okdkGodData = okdk.utils.loadJSON(okdk.constants.OKEYDOKEY_GOD_DATA_PATH);
+      this._okdkGodAbi = okdkGodData.abi;
+      this._okdkGodAddress = '0x98f6621da7b5f3dddcd4bc74310e3f2410350f12';
+      let okdkGodContract = new okdk.web3.eth.Contract(
+      this._okdkGodAbi, this._okdkGodAddress);
 
-      /* Fetch and construct libraries. */
-      const iterableMappingData = okdk.utils.loadJSON(okdk.constants.ITERABLE_MAPPING_DATA_PATH);
-      this._iterableMappingAbi = iterableMappingData.abi;
-      this._iterableMappingBytecode = iterableMappingData.bytecode;
-      this._iterableMappingAddress = contractAddresses.iterableMapping;
-
-      /* Fetch and construct libraries. */
-      const safeMathData = okdk.utils.loadJSON(okdk.constants.SAFE_MATH_DATA_PATH);
-      this._safeMathAbi = safeMathData.abi;
-      this._safeMathBytecode = safeMathData.bytecode;
-      this._safeMathAddress = contractAddresses.safeMath;
+      /* Set up OkeyDokey. */
+      const okdkData = okdk.utils.loadJSON(okdk.constants.OKEYDOKEY_DATA_PATH);
+      this._okdkAbi = okdkData.abi;
+      const okdkAddress = await okdkGodContract.methods.getAddress().call();
+      this._okdkAddress = okdkAddress;
+      let okdkContract = new okdk.web3.eth.Contract(this._okdkAbi, this._okdkAddress);
 
       /* Fetch and construct token contract. */
       const tokenData = okdk.utils.loadJSON(okdk.constants.TOKEN_DATA_PATH);
       this._tokenAbi = tokenData.abi;
       this._tokenBytecode = tokenData.bytecode;
-      this._tokenAddress = contractAddresses.token;
+      const tokenAddresss = await okdkContract.methods.getAddress(0).call();
+      this._tokenAddress = tokenAddresss;
 
-      /* Fetch and construct whitelist contract. */
-      const whitelistData = okdk.utils.loadJSON(okdk.constants.WHITELIST_DATA_PATH);
-      this._whitelistAbi = whitelistData.abi;
-      this._whitelistBytecode = whitelistData.bytecode;
-      this._whitelistAddress = contractAddresses.whitelist;
+      /* Fetch and iterable mapping library. */
+      const iterableMappingData = okdk.utils.loadJSON(okdk.constants.ITERABLE_MAPPING_DATA_PATH);
+      this._iterableMappingAbi = iterableMappingData.abi;
+      this._iterableMappingBytecode = iterableMappingData.bytecode;
+      const iterableMappingAddress = await okdkContract.methods.getAddress(1).call();
+      this._iterableMappingAddress = iterableMappingAddress;
 
-      /* Fetch and construct whitelist contract. */
-      const referralData = okdk.utils.loadJSON(okdk.constants.REFERRAL_DATA_PATH);
-      this._referralAbi = referralData.abi;
-      this._referralBytecode = referralData.bytecode;
-      this._referralAddress = contractAddresses.referral;
+      /* Fetch and construct safe math library. */
+      const safeMathData = okdk.utils.loadJSON(okdk.constants.SAFE_MATH_DATA_PATH);
+      this._safeMathAbi = safeMathData.abi;
+      this._safeMathBytecode = safeMathData.bytecode;
+      const safeMathAddress = await okdkContract.methods.getAddress(2).call();
+      this._safeMathAddress = safeMathAddress;
 
-      /* Fetch and construct ico contracts. */
-      const icoData = okdk.utils.loadJSON(okdk.constants.ICO_DATA_PATH);
-      this._icoAbi = icoData.abi;
-      this._icoBytecode = icoData.bytecode;
-      this._reservationSaleAddress = contractAddresses.reservationSale;
-      this._presaleAddress = contractAddresses.presale;
-      this._publicSaleAddress = contractAddresses.publicSale;
+      /* Fetch and construct database library. */
+      const databaseData = okdk.utils.loadJSON(okdk.constants.DATABASE_DATA_PATH);
+      this._databseAbi = databaseData.abi;
+      this._databaseBytecode = databaseData.bytecode;
+      const databaseAddress = await okdkContract.methods.getAddress(3).call();
+      this._databaseAddress = databaseAddress;
+
+       /* Fetch and construct token contract. */
+       const databaseTestData = okdk.utils.loadJSON(okdk.constants.DATABASE_TEST_DATA_PATH);
+       this._databseTestAbi = databaseTestData.abi;
+       this._databaseTestBytecode = databaseTestData.bytecode;
+       const databaseTestAddress = await okdkContract.methods.getAddress(4).call();
+       this._databaseTestAddress = databaseTestAddress;
 
     } catch (error) {
       throw error;
