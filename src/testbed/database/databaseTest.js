@@ -34,7 +34,7 @@ export default class DatabaseTest extends Contract {
    *
    * @param {string} _tableName - Table name.
    */
-  async createTable(_tableName) {
+  async readTable(_user, _password, _tableName, _options) {
 
     const hexName = okdk.web3.utils.toHex(_tableName);
     
@@ -63,10 +63,11 @@ export default class DatabaseTest extends Contract {
    *
    * @param {string} _tableName - Table name.
    */
-  async createTable(_tableName) {
+  async createTable(_user, _password, _tableName, _options) {
     try {
       
       const hexName = okdk.web3.utils.toHex(_tableName);
+      console.log(hexName);
 
       // Construct abi.
       let callData =

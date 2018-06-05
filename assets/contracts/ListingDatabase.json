@@ -1,8 +1,8 @@
 {
   "contractName": "ListingDatabase",
   "abi": [],
-  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820192347ced203509abc7b76281073e73dd567b060f1b9083e29f65ec1ec05f7cd0029",
-  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820192347ced203509abc7b76281073e73dd567b060f1b9083e29f65ec1ec05f7cd0029",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a723058207694636f97562e3db966d9b9732a5d5559c307a56a92a3d79c93c079aa27cc3f0029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a723058207694636f97562e3db966d9b9732a5d5559c307a56a92a3d79c93c079aa27cc3f0029",
   "sourceMap": "61:29:6:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;61:29:6;;;;;;;",
   "deployedSourceMap": "61:29:6:-;;;;;",
   "source": "pragma solidity ^0.4.19;\n\nimport \"../storage/Database.sol\";\n\ncontract ListingDatabase {\n\n}",
@@ -34,7 +34,7 @@
         "id": 1292,
         "nodeType": "ImportDirective",
         "scope": 1294,
-        "sourceUnit": 2261,
+        "sourceUnit": 2301,
         "src": "26:33:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -85,7 +85,7 @@
         "id": 1292,
         "nodeType": "ImportDirective",
         "scope": 1294,
-        "sourceUnit": 2261,
+        "sourceUnit": 2301,
         "src": "26:33:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -115,5 +115,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-06-04T20:22:03.921Z"
+  "updatedAt": "2018-06-05T01:08:04.345Z"
 }

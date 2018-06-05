@@ -35,8 +35,8 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b506040516040806101b08339810180604052810190808051906020019092919080519060200190929190505050600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415151561007957600080fd5b3073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141515156100b457600080fd5b816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505060ac806101046000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063bd67b9a2146044575b600080fd5b348015604f57600080fd5b50607a600480360381019080803560001916906020019092919080359060200190929190505050607c565b005b50505600a165627a7a72305820b2fc669ae865a7db6a99ac1d518620e23d2fa6b4b574077870a6cbc123f6143b0029",
-  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063bd67b9a2146044575b600080fd5b348015604f57600080fd5b50607a600480360381019080803560001916906020019092919080359060200190929190505050607c565b005b50505600a165627a7a72305820b2fc669ae865a7db6a99ac1d518620e23d2fa6b4b574077870a6cbc123f6143b0029",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516040806101b08339810180604052810190808051906020019092919080519060200190929190505050600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415151561007957600080fd5b3073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141515156100b457600080fd5b816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505060ac806101046000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063bd67b9a2146044575b600080fd5b348015604f57600080fd5b50607a600480360381019080803560001916906020019092919080359060200190929190505050607c565b005b50505600a165627a7a72305820a9f37edb96c54436bf4e77e28161cb27f73234867a43fbb420abf77e6ce7ac710029",
+  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063bd67b9a2146044575b600080fd5b348015604f57600080fd5b50607a600480360381019080803560001916906020019092919080359060200190929190505050607c565b005b50505600a165627a7a72305820a9f37edb96c54436bf4e77e28161cb27f73234867a43fbb420abf77e6ce7ac710029",
   "sourceMap": "122:1457:7:-;;;858:587;8:9:-1;5:2;;;30:1;27;20:12;5:2;858:587:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;978:1;949:31;;:17;:31;;;;941:40;;;;;;;;1024:4;995:34;;:17;:34;;;;987:43;;;;;;;;1091:17;1069:9;;:40;;;;;;;;;;;;;;;;;;858:587;;122:1457;;;;;;",
   "deployedSourceMap": "122:1457:7:-;;;;;;;;;;;;;;;;;;;;;;;;1488:88;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1488:88:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
   "source": "pragma solidity ^0.4.19;\n\nimport \"../OkeyDokey.sol\";\nimport \"./TransactionDatabase.sol\";\nimport \"./ListingDatabase.sol\";\n\ncontract Market {\n  \n  /** Instance of OkeyDokey contract. */\n  OkeyDokey private okeydokey;\n\n  /** Instance of TransactionDatabase contract. */\n  TransactionDatabase private transactionDB;\n\n  /** Instance of ListingDatabase contract. */\n  ListingDatabase private listingDB;\n\n  /**\n   * Modifier for functions only smart contract admins can run.\n   */\n  modifier onlyAdmin() {\n    require(okeydokey != address(0));\n    require(okeydokey.isAdmin(msg.sender));\n\n    _;\n  }\n\n  /**\n   * Constrctor function. \n   *\n   * Initialize other OKDK contracts this contract depends on.\n   *\n   * @param _okeydokeyAddress The address of main application contract\n   * @param _listingDBAddress The address of database contract for market data\n   */\n  function Market(address _okeydokeyAddress, address _listingDBAddress) public {\n    require(_okeydokeyAddress != address(0));\n    require(_okeydokeyAddress != address(this));\n\n    /* Initialize OkeyDokey. */\n    okeydokey = OkeyDokey(_okeydokeyAddress);\n\n    /* Initialize transaction db. */\n    // address marketDBAddress = okeydokey.getAddress(okeydokey.TRANSACTION_DATABASE);\n    // transactionDB = MarketDatabase(dbAddress);\n\n    /* Initialize listing db. */\n    // address dbAddress = okeydokey.getAddress(okeydokey.MARKET_DATABASE);\n    // listingDB = MarketDatabase(dbAddress);\n  }\n\n  /** \n   * List item on market.\n   */\n  function listItem(bytes32 _id, uint _price) public {\n    // db.write(_id, _price, );\n  }\n\n}",
@@ -302,10 +302,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        7817,
-                        7818
+                        7885,
+                        7886
                       ],
-                      "referencedDeclaration": 7817,
+                      "referencedDeclaration": 7885,
                       "src": "503:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -345,7 +345,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 7814,
+                              "referencedDeclaration": 7882,
                               "src": "567:3:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -427,10 +427,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        7817,
-                        7818
+                        7885,
+                        7886
                       ],
-                      "referencedDeclaration": 7817,
+                      "referencedDeclaration": 7885,
                       "src": "541:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -585,10 +585,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        7817,
-                        7818
+                        7885,
+                        7886
                       ],
-                      "referencedDeclaration": 7817,
+                      "referencedDeclaration": 7885,
                       "src": "941:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -652,7 +652,7 @@
                               "name": "this",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 7847,
+                              "referencedDeclaration": 7915,
                               "src": "1024:4:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_contract$_Market_$1363",
@@ -712,10 +712,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        7817,
-                        7818
+                        7885,
+                        7886
                       ],
-                      "referencedDeclaration": 7817,
+                      "referencedDeclaration": 7885,
                       "src": "987:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1259,10 +1259,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        7817,
-                        7818
+                        7885,
+                        7886
                       ],
-                      "referencedDeclaration": 7817,
+                      "referencedDeclaration": 7885,
                       "src": "503:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1302,7 +1302,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 7814,
+                              "referencedDeclaration": 7882,
                               "src": "567:3:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -1384,10 +1384,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        7817,
-                        7818
+                        7885,
+                        7886
                       ],
-                      "referencedDeclaration": 7817,
+                      "referencedDeclaration": 7885,
                       "src": "541:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1542,10 +1542,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        7817,
-                        7818
+                        7885,
+                        7886
                       ],
-                      "referencedDeclaration": 7817,
+                      "referencedDeclaration": 7885,
                       "src": "941:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1609,7 +1609,7 @@
                               "name": "this",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 7847,
+                              "referencedDeclaration": 7915,
                               "src": "1024:4:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_contract$_Market_$1363",
@@ -1669,10 +1669,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        7817,
-                        7818
+                        7885,
+                        7886
                       ],
-                      "referencedDeclaration": 7817,
+                      "referencedDeclaration": 7885,
                       "src": "987:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1961,5 +1961,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-06-04T20:22:03.921Z"
+  "updatedAt": "2018-06-05T01:08:04.345Z"
 }
